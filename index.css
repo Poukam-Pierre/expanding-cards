@@ -1,0 +1,74 @@
+
+*{
+    box-sizing: border-boxS;
+}
+body{
+    font-family: 'Multi', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    width: 90vw
+}
+
+.section{
+    display: flex;
+    flex-direction: column-reverse;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 87vh;
+    border-radius: 50px;
+    margin: 8px;
+    cursor: pointer;
+    transition: all 0.7s ease-out;
+    flex: 0.2;
+    color: white;
+
+}
+
+.one{
+    background-image: url("./fond1.jpeg");
+}
+.two{
+    background-image: url("./fond2.jpg");
+}
+.tree{
+    background-image: url("./fond3.jpg");
+}
+.four{
+    background-image: url("./fond4.jpg");
+}
+.five{
+    background-image: url("./fond5.jpg");
+}
+
+ .section.active{
+    flex: 3;
+}
+
+h3{
+    display: flex;
+    padding: 20px;
+    opacity: 0;
+}
+
+.section.active h3{
+    opacity: 1;
+    transition: all 0.2s ease-in 0.4s;
+}
+
+@media(max-width:480px) {
+    .container{
+        width: 100vw
+    }
+    .section:nth-of-type(4), .section:nth-of-type(5){
+        display: none;
+    }
+}
